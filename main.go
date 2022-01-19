@@ -11,6 +11,7 @@ func main() {
 	viper.SetConfigType("yaml")
 	viper.SetConfigName("urls")
 	viper.AddConfigPath(".")
+	viper.AddConfigPath("/config")
 	if err := viper.ReadInConfig(); err != nil {
 		panic(err)
 	}
